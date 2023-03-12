@@ -13,7 +13,6 @@ class DBTestController extends Controller
     {
         try {
             DB::connection()->getPdo();
-            \dump(VideoCall::all()[0]->meeting);
             return 'you are connected to database';
         } catch(\Exception $e) {
             return $e->getMessage();
